@@ -34,7 +34,7 @@ class Stopwatch:
         for lap in self.laps:
             if lap.calculate_time_elapsed() >= 0:
                 total_time += lap.calculate_time_elapsed()
-
+        print("{}: {}/{}".format(self.name, total_time, len(self.laps)))
         return total_time / float(len(self.laps)) if len(self.laps) > 0 else 0
 
     def start_lap(self):

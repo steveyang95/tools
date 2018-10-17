@@ -1,0 +1,11 @@
+# general ignoring
+*.pyc
+*.log
+.idea
+tags
+.vscode
+.DS_Store
+# we create these and don't do anything with them at the moment
+MANIFEST
+
+*.pytest_cache

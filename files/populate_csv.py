@@ -1,26 +1,7 @@
-import os
-import sys
-import time
-import requests
-import json
-import pprint
-import collections
-import csv
-import datetime
-import argparse
-import textwrap
 import string
 import random
 
-def write_to_files(csv_keys, file_name, data, path_to_file=None):
-    if path_to_file:
-        file_name = os.path.expanduser("{}/{}".format(path_to_file, file_name))
-
-    _out("Writing out to file {}.csv".format(file_name))
-    with open("{}.csv".format(file_name), 'w') as csvfile:
-        dict_writer = csv.DictWriter(csvfile, list(csv_keys))
-        dict_writer.writeheader()
-        dict_writer.writerows(data)
+from csv_helper import write_to_files
 
 
 def id_generator(size=9, chars=string.ascii_letters + string.digits):
