@@ -5,6 +5,10 @@
 tags
 .vscode
 .DS_Store
+
+*.crt
+*.key
+
 # we create these and don't do anything with them at the moment
 MANIFEST
 
